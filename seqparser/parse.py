@@ -96,8 +96,12 @@ class Parser:
             # and implement an exception for the error you will find in
             # the error message you receive. 
             while True:
-                rec = self.get_record(f_obj)
-                yield rec
+                try:
+                    rec = self.get_record(f_obj)
+                    yield rec
+                except StopIteration:
+                    break
+
 
     def _get_record(self, f_obj: io.TextIOWrapper) -> Union[Tuple[str, str], Tuple[str, str, str]]:
         """
@@ -117,6 +121,21 @@ class FastaParser(Parser):
         """
         returns the next fasta record
         """
+        count = 0
+        header = f_obj.readline()
+        seq = f_obj.readline()
+        count += 2
+
+        header = header.strip()
+        seq = seq.strip()
+
+        if len(header or seq) == 0:
+            raise StopIteration
+        else:
+            return (header, seq)
+
+
+        
 
 
 class FastqParser(Parser):
@@ -127,4 +146,16 @@ class FastqParser(Parser):
         """
         returns the next fastq record
         """
+        header = f_obj.readline()
+        seq = f_obj.readline()
+        skip = f_obj.readline()
+        qual = f_obj.readline()
 
+        header = header.strip()
+        seq = seq.strip()
+        qual = qual.strip()
+
+        if len(header or seq or qual) == 0:
+            raise StopIteration
+        else:
+            return (header, seq, qual)
