@@ -1,6 +1,9 @@
 # Project 1
 Building a FAST[AQ] Parser + Building a DNA -> RNA Transcriber
 
+![](https://github.com/MyName/my-project/workflows/Project%20Tests/badge.svg)
+
+
 # Assignment Overview
 The purpose of this assignment is to bring everybody up to speed on using python and highlight some of the elements of the language and of OOP that will be _inherited_ by downstream course content. We also hope to use this as an opportunity to learn some of the useful tools within github for software development that will be useful to you in your research experiences down the road. 
 
