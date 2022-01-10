@@ -1,7 +1,8 @@
+![seqparser](https://github.com/seba2550/project1/actions/workflows/seqparser.yml/badge.svg)
+
 # Project 1
 Building a FAST[AQ] Parser + Building a DNA -> RNA Transcriber
 
-![seqparser Actions Status](https://github.com/seba2550/project1/workflows/seqparser/badge.svg)
 
 
 # Assignment Overview
