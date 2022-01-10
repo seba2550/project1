@@ -20,6 +20,7 @@ jobs:
     - name: Install my seqparse module
       run: |
         python -m pip install .
-    - name: Run pytest
+    - name: Install and run pytest
       run: |
+        python -m pip install pytest
         pytest -v
