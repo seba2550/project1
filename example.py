@@ -39,7 +39,10 @@ def main():
     for record in fastq_instance:
         print(reverse_transcribe(record[1]))
 
-
+    sample_dna = "GATGGAACTTGACTACGTAAATT" # Sample DNA string from the Rosalind "rna" problem
+    sample_rna = "GAUGGAACUUGACUACGUAAAUU" # Corresponding transcribed string from the Rosalind website
+    rna = transcribe(sample_dna)
+    assert "T"  in rna
 
 """
 When executing a python script from the command line there will
