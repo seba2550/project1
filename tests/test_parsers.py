@@ -28,7 +28,7 @@ def test_FastaParser():
     your FastaParser class and assert that it properly
     reads in the example Fasta File.
     """
-    fasta_path = "/Users/sebastiancruzgonzales/Documents/UCSF/BMI_203/project1/data/test.fa"
+    fasta_path = "./data/test.fa"
     fasta_test_instance = FastaParser(fasta_path)
 
     fasta_line_count = 0
@@ -48,7 +48,7 @@ def test_FastqParser():
     your FastqParser class and assert that it properly
     reads in the example Fastq File.
     """
-    fastq_path = "/Users/sebastiancruzgonzales/Documents/UCSF/BMI_203/project1/data/test.fq"
+    fastq_path = "./data/test.fq"
     fastq_test_instance = FastqParser(fastq_path)
 
     fastq_line_count = 0
